@@ -7,7 +7,7 @@ class BootcampsController < ApplicationController
     @bootcamps = Bootcamp.all
     if params[:search].to_s != ''
       @bootcamps = Bootcamp.where("name LIKE '%#{params[:search]}%'")
-    else 
+    else
       @bootcamps = Bootcamp.all
     end
   end
@@ -74,6 +74,6 @@ class BootcampsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bootcamp_params
-      params.require(:bootcamp).permit(:name, :description, :dates)
+      params.require(:bootcamp).permit(:name, :description, :dates, :avatar)
     end
 end

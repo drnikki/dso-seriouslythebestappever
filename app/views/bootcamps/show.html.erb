@@ -15,5 +15,7 @@
   <%= @bootcamp.dates %>
 </p>
 
+<%= image_tag @bootcamp.avatar.url %>
+
 <%= link_to 'Edit', edit_bootcamp_path(@bootcamp) %> |
 <%= link_to 'Back', bootcamps_path %>
