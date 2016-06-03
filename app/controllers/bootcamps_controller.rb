@@ -1,4 +1,5 @@
 class BootcampsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_bootcamp, only: [:show, :edit, :update, :destroy]
 
   # GET /bootcamps
